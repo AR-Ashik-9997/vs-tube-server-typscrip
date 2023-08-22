@@ -1,0 +1,55 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\.b17697bff18f3182ad7fc453c40a680843de5b44-audit.json",
+    "files": [
+        {
+            "date": 1692555669922,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-21-08-00-success.log",
+            "hash": "a1a1f3865595ecef857b7a48bf09e3b9e63befb89da098f78426989187d1a27c"
+        },
+        {
+            "date": 1692558782671,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-21-08-01-success.log",
+            "hash": "ce1f95112805add0bcece86ace67f5118f430deaefd0809273262b0b6175962e"
+        },
+        {
+            "date": 1692561866604,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-21-08-02-success.log",
+            "hash": "273903df25bc015a6173747b0cf8109363e8af71577e38014010e2e4f3d1339e"
+        },
+        {
+            "date": 1692566365794,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-21-08-03-success.log",
+            "hash": "09648fbac49a589e4fc8ec740946ed7a1bb5edc0597188cb3146bcdbeb4961d7"
+        },
+        {
+            "date": 1692632168351,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-21-08-21-success.log",
+            "hash": "9a0bdb83af4414272bc5da843816bbd4f5df7f45203e8f6f3d731892c94587c3"
+        },
+        {
+            "date": 1692648199950,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-22-08-02-success.log",
+            "hash": "08b34ca62a0544f40c7f18f61c45e89115c53c220e2ed690dad33cbefa45eae8"
+        },
+        {
+            "date": 1692683674845,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-22-08-11-success.log",
+            "hash": "22fb4ca0336779d2ed41ccb81337d7d69197db16d2092a538eb1556d642696c2"
+        },
+        {
+            "date": 1692697459428,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-22-08-15-success.log",
+            "hash": "49a41acb39008a2278c514f14550dac0fe1d26933f06d43d0f142fc8416a052c"
+        },
+        {
+            "date": 1692699089869,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-22-08-16-success.log",
+            "hash": "ddcc4b9ab43c670b284d1dfb034ee7a7d34d5e904ee95c0ec7de3a8c4156ae71"
+        }
+    ],
+    "hashType": "sha256"
+}
