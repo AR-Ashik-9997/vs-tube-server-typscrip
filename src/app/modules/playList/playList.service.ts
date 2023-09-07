@@ -1,4 +1,4 @@
-import { Prisma, Yt_Playlist } from '@prisma/client';
+import { PlayList, Prisma } from '@prisma/client';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
@@ -6,8 +6,8 @@ import prisma from '../../../shared/prisma';
 import { PlayListsearchFields } from './playList.interface';
 import { PlayListSearchableFields } from './playlist.constant';
 
-const CreatePlayList = async (payload: Yt_Playlist): Promise<Yt_Playlist> => {
-  const result = await prisma.yt_Playlist.create({
+const CreatePlayList = async (payload: PlayList): Promise<PlayList> => {
+  const result = await prisma.playList.create({
     data: payload,
   });
   return result;
@@ -15,7 +15,7 @@ const CreatePlayList = async (payload: Yt_Playlist): Promise<Yt_Playlist> => {
 const GetAllPlaylists = async (
   filters: PlayListsearchFields,
   paginationOptions: IPaginationOptions
-): Promise<IGenericResponse<Yt_Playlist[]>> => {
+): Promise<IGenericResponse<PlayList[]>> => {
   const { page, limit, skip } =
     paginationHelpers.calculatePagination(paginationOptions);
   const { searchTerm, ...filterData } = filters;
@@ -40,9 +40,9 @@ const GetAllPlaylists = async (
       })),
     });
   }
-  const whereConditions: Prisma.Yt_PlaylistWhereInput =
+  const whereConditions: Prisma.PlayListWhereInput =
     andConditions.length > 0 ? { AND: andConditions } : {};
-  const result = await prisma.yt_Playlist.findMany({
+  const result = await prisma.playList.findMany({
     where: whereConditions,
     skip,
     take: limit,
@@ -51,7 +51,7 @@ const GetAllPlaylists = async (
         ? { [paginationOptions.sortBy]: paginationOptions.sortOrder }
         : {},
   });
-  const total = await prisma.yt_Playlist.count();
+  const total = await prisma.playList.count();
   return {
     meta: {
       total,
@@ -62,11 +62,12 @@ const GetAllPlaylists = async (
   };
 };
 
-const GetSinglePlaylist = async (id: string): Promise<Yt_Playlist | null> => {
-  const result = await prisma.yt_Playlist.findUnique({
+const GetSinglePlaylist = async (id: string): Promise<PlayList | null> => {
+  const result = await prisma.playList.findUnique({
     where: {
       id,
     },
+    include: { comments: true },
   });
   return result;
 };

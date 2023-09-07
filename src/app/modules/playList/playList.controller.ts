@@ -1,4 +1,3 @@
-import { Yt_Playlist } from '@prisma/client';
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import { paginationFields } from '../../../constants/pagination';
@@ -7,11 +6,12 @@ import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
 import { PlayListService } from './playList.service';
 import { PlayListFilterableFields } from './playlist.constant';
+import { PlayList } from '@prisma/client';
 
 const CreatePlayList = catchAsync(async (req: Request, res: Response) => {
   const { ...data } = req.body;
   const result = await PlayListService.CreatePlayList(data);
-  sendResponse<Yt_Playlist>(res, {
+  sendResponse<PlayList>(res, {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Youtube PlayList created successfully',
