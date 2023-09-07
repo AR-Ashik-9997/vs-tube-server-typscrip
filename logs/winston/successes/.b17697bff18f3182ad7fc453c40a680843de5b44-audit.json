@@ -74,6 +74,16 @@
             "date": 1694092294497,
             "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-07-09-19-success.log",
             "hash": "de108fd3ccdde6368770703ee3a88dea8db1e4b4d066013f0bf24aed9026fbc1"
+        },
+        {
+            "date": 1694113180684,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-08-09-00-success.log",
+            "hash": "ce4d9cb8fae20e8ce75d31c8e1091863b7fed348c679d34406543950c1a4a4eb"
+        },
+        {
+            "date": 1694113409449,
+            "name": "G:\\Next Level-2\\vs_tube_server\\logs\\winston\\successes\\phu-2023-08-09-01-success.log",
+            "hash": "c68e76953f6dfa9e7ff0ecea5c1e2f25e0406730c008fe058914b5141eb496dd"
         }
     ],
     "hashType": "sha256"

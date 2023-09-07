@@ -14,9 +14,9 @@ const CreateUSerwithGoogle = async (
     },
   });
   if (existUser) {
-    const { id, role, name, email } = existUser;
+    const { id, role, name, image, email } = existUser;
     const token = jwtHelpers.createToken(
-      { id, role, name, email },
+      { id, role, name, image, email },
       config.jwt.secret as Secret,
       config.jwt.expires_in as string
     );
@@ -26,9 +26,9 @@ const CreateUSerwithGoogle = async (
       data: payload,
     });
 
-    const { id, role, name, email } = newUser;
+    const { id, role, name, image, email } = newUser;
     const token = jwtHelpers.createToken(
-      { id, role, name, email },
+      { id, role, name, image, email },
       config.jwt.secret as Secret,
       config.jwt.expires_in as string
     );

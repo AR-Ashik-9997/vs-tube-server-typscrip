@@ -1,6 +1,8 @@
 import express from 'express';
+import { ENUM_USER_ROLE } from '../../../enums/user';
+import auth from '../../middlewares/auth';
 import { CommentController } from './comment.controller';
 
 const router = express.Router();
-router.post('/', CommentController.CreateComment);
+router.post('/', auth(ENUM_USER_ROLE.USER), CommentController.CreateComment);
 export const CommentRoutes = router;
