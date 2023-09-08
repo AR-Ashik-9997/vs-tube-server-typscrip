@@ -19,4 +19,9 @@ const CreateComment = async (
   return result;
 };
 
-export const CommentService = { CreateComment };
+const getAllCommentBySingleVideo = async (id: string):Promise<Comment[]> => {
+  const result = await prisma.comment.findMany({ where: { playlistId: id } });
+  return result;
+};
+
+export const CommentService = { CreateComment, getAllCommentBySingleVideo };

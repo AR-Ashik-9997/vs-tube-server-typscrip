@@ -61,13 +61,11 @@ const GetAllPlaylists = async (
     data: result,
   };
 };
-
 const GetSinglePlaylist = async (id: string): Promise<PlayList | null> => {
   const result = await prisma.playList.findUnique({
     where: {
       id,
     },
-    include: { comments: true },
   });
   return result;
 };
