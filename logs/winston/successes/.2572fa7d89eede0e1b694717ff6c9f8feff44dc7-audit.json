@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/successes/.2572fa7d89eede0e1b694717ff6c9f8feff44dc7-audit.json",
+    "files": [
+        {
+            "date": 1694806369601,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/successes/phu-2023-16-09-01-success.log",
+            "hash": "cd74692549a10121fe446d1bd087c48fe3274b285c343d17361115967b4dc1a8"
+        },
+        {
+            "date": 1694808062147,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/successes/phu-2023-16-09-02-success.log",
+            "hash": "b75750514f518b30ccc0dfb9241b27ee37b36838b2684a2c7a39e5c4cf58311a"
+        },
+        {
+            "date": 1694812380655,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/successes/phu-2023-16-09-03-success.log",
+            "hash": "57f30808244d45f89fe9a1db64585e24c48c7ce9611e3084a9e92580d343cab4"
+        },
+        {
+            "date": 1694852721365,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/successes/phu-2023-16-09-14-success.log",
+            "hash": "d873dda51556445aa1c98f7f2a3f09681883618cdfd82d7a3692a2d97f7f1c8f"
+        },
+        {
+            "date": 1694856813120,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/successes/phu-2023-16-09-15-success.log",
+            "hash": "44ab0658f53fdcc911952ac0dce3f8702c340b59e8793cc95127e6604a234665"
+        }
+    ],
+    "hashType": "sha256"
+}

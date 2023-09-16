@@ -1,0 +1,12 @@
+Sat Sep 16 2023 14:25:21 } [PH] error: Unable to require(`[2m/media/ashik/Project/Next Level-2/vs_tube_server/node_modules/.prisma/client/libquery_engine-debian-openssl-3.0.x.so.node[22m`).
+Prisma has detected an incompatible version of the `glibc` C standard library installed in your system. This probably means your system may be too old to run Prisma. Please refer to the documentation about Prisma's system requirements: ]8;;https://pris.ly/d/system-requirementshttps://pris.ly/d/system-requirements]8;;
+
+Details: /snap/core20/current/lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /lib/x86_64-linux-gnu/libcrypto.so.3)
+Sat Sep 16 2023 14:40:29 } [PH] error: Unable to require(`[2m/media/ashik/Project/Next Level-2/vs_tube_server/node_modules/.prisma/client/libquery_engine-debian-openssl-3.0.x.so.node[22m`).
+Prisma has detected an incompatible version of the `glibc` C standard library installed in your system. This probably means your system may be too old to run Prisma. Please refer to the documentation about Prisma's system requirements: ]8;;https://pris.ly/d/system-requirementshttps://pris.ly/d/system-requirements]8;;
+
+Details: /snap/core20/current/lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /lib/x86_64-linux-gnu/libcrypto.so.3)
+Sat Sep 16 2023 14:56:33 } [PH] error: Unable to require(`[2m/media/ashik/Project/Next Level-2/vs_tube_server/node_modules/.prisma/client/libquery_engine-debian-openssl-3.0.x.so.node[22m`).
+Prisma has detected an incompatible version of the `glibc` C standard library installed in your system. This probably means your system may be too old to run Prisma. Please refer to the documentation about Prisma's system requirements: ]8;;https://pris.ly/d/system-requirementshttps://pris.ly/d/system-requirements]8;;
+
+Details: /snap/core20/current/lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.33' not found (required by /lib/x86_64-linux-gnu/libcrypto.so.3)

@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/errors/.12b66ebddaed25df7c2aeb0bb79f348fd25ceb3d-audit.json",
+    "files": [
+        {
+            "date": 1694806369607,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/errors/phu-2023-16-09-01-error.log",
+            "hash": "d4470e7860c1003626e93c42f395024e9b493c09dc94fcd7dba43a5b3ba731dc"
+        },
+        {
+            "date": 1694808062149,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/errors/phu-2023-16-09-02-error.log",
+            "hash": "e44a935235b229fb84a597db627552a474521d7d8e5b6ceace8ac8209dd54521"
+        },
+        {
+            "date": 1694812380658,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/errors/phu-2023-16-09-03-error.log",
+            "hash": "0e844526d48b935e98a27571137efbb80eaf5827f9710b5f157dc1663d222155"
+        },
+        {
+            "date": 1694852721368,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/errors/phu-2023-16-09-14-error.log",
+            "hash": "55cb47f3b982aba61a607fccbb03467a66eb5d09d329242983b002151b5d313a"
+        },
+        {
+            "date": 1694856813127,
+            "name": "/media/ashik/Project/Next Level-2/vs_tube_server/logs/winston/errors/phu-2023-16-09-15-error.log",
+            "hash": "70aaa155b3eba2517416cd515661253b6ee16a567cce88a1b4a24203fde4243b"
+        }
+    ],
+    "hashType": "sha256"
+}
