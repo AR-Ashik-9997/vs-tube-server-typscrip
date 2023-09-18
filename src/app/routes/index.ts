@@ -2,6 +2,7 @@ import express from 'express';
 import { AuthRouts } from '../modules/auth/auth.router';
 import { CommentRoutes } from '../modules/comment/comment.router';
 import { PlayListRoutes } from '../modules/playList/playList.router';
+import { UserReactionRoutes } from './../modules/UserReaction/reaction.routes';
 
 const router = express.Router();
 
@@ -17,6 +18,10 @@ const moduleRoutes = [
   {
     path: '/comments',
     routes: CommentRoutes,
+  },
+  {
+    path: '/reactions',
+    routes: UserReactionRoutes,
   },
 ];
 
