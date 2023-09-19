@@ -25,12 +25,13 @@ model User {
 }
 
 model PlayList {
-  id       String     @id @default(uuid())
-  image    String
-  video    String
-  title    String
-  comments Comment[]
-  Reaction Reaction[]
+  id           String         @id @default(uuid())
+  image        String
+  video        String
+  title        String
+  comments     Comment[]
+  Reaction     Reaction[]
+  ViewReaction ViewReaction[]
 
   @@map("playlists")
 }
@@ -51,16 +52,29 @@ model Comment {
 }
 
 model Reaction {
+  id           String         @id @default(uuid())
+  likes        String         @default("0")
+  dislikes     String         @default("0")
+  playlist     PlayList       @relation(fields: [playlistId], references: [id])
+  playlistId   String
+  user         User           @relation(fields: [userId], references: [id])
+  userId       String
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@map("reactions")
+}
+
+model ViewReaction {
   id         String   @id @default(uuid())
   likes      String   @default("0")
   dislikes   String   @default("0")
   playlist   PlayList @relation(fields: [playlistId], references: [id])
-  playlistId String
-  user       User     @relation(fields: [userId], references: [id])
-  userId     String
+  playlistId String 
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
-   @@map("reactions")
+
+  @@map("viewreactions")
 }
 
 enum Role {
