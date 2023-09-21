@@ -1,3 +1,4 @@
+import { PlayList } from '@prisma/client';
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import { paginationFields } from '../../../constants/pagination';
@@ -6,7 +7,6 @@ import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
 import { PlayListService } from './playList.service';
 import { PlayListFilterableFields } from './playlist.constant';
-import { PlayList } from '@prisma/client';
 
 const CreatePlayList = catchAsync(async (req: Request, res: Response) => {
   const { ...data } = req.body;
@@ -34,6 +34,7 @@ const GetAllPlaylists = catchAsync(async (req: Request, res: Response) => {
     data: result.data,
   });
 });
+
 const GetSinglePlaylists = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const result = await PlayListService.GetSinglePlaylist(id);
@@ -44,8 +45,22 @@ const GetSinglePlaylists = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+const GetSinglePlaylistViews = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const result = await PlayListService.GetSinglePlaylistViews(id);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Youtube PlayListViews retrive successfully',
+      data: result,
+    });
+  }
+);
+
 export const PlayListController = {
   CreatePlayList,
   GetAllPlaylists,
   GetSinglePlaylists,
+  GetSinglePlaylistViews,
 };

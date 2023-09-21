@@ -1,4 +1,4 @@
-import { PlayList, Prisma } from '@prisma/client';
+import { PlayList, Prisma, View } from '@prisma/client';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
@@ -12,6 +12,7 @@ const CreatePlayList = async (payload: PlayList): Promise<PlayList> => {
   });
   return result;
 };
+
 const GetAllPlaylists = async (
   filters: PlayListsearchFields,
   paginationOptions: IPaginationOptions
@@ -67,10 +68,39 @@ const GetSinglePlaylist = async (id: string): Promise<PlayList | null> => {
       id,
     },
   });
+  const existingViews = await prisma.view.findFirst({
+    where: { playlistId: id },
+  });
+  await prisma.$transaction(async tx => {
+    if (!existingViews) {
+      return await tx.view.create({
+        data: {
+          playlistId: id,
+          view: '1',
+        },
+      });
+    } else {
+      return await tx.view.update({
+        where: { id: existingViews.id },
+        data: {
+          view: (parseInt(existingViews.view) + 1).toString(),
+        },
+      });
+    }
+  });
+  return result;
+};
+const GetSinglePlaylistViews = async (id: string): Promise<View | null> => {
+  const result = await prisma.view.findFirst({
+    where: {
+      playlistId: id,
+    },
+  });
   return result;
 };
 export const PlayListService = {
   CreatePlayList,
   GetAllPlaylists,
   GetSinglePlaylist,
+  GetSinglePlaylistViews,
 };

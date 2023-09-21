@@ -5,10 +5,15 @@ import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { ReactionService } from './reaction.service';
 
-const createUserReaction = catchAsync(async (req: Request) => {
+const createUserReaction = catchAsync(async (req: Request, res: Response) => {
   const user: JwtPayload = req.user!;
   const { ...reactionData } = req.body;
   await ReactionService.createUserReaction(user, reactionData);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'UserReaction created successfully',
+  });
 });
 const getAllReactionBySingleVideo = catchAsync(
   async (req: Request, res: Response) => {
