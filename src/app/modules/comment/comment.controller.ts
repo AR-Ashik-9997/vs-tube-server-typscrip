@@ -1,10 +1,10 @@
-import { Comment } from '@prisma/client';
-import { Request, Response } from 'express';
-import httpStatus from 'http-status';
-import { JwtPayload } from 'jsonwebtoken';
-import catchAsync from '../../../shared/catchAsync';
-import sendResponse from '../../../shared/sendResponse';
-import { CommentService } from './comment.service';
+import { Request, Response } from "express";
+import catchAsync from "../../../shared/catchAsync";
+import { JwtPayload } from "jsonwebtoken";
+import { CommentService } from "./comment.service";
+import { Comment } from "@prisma/client";
+import sendResponse from "../../../shared/sendResponse";
+import httpStatus from "http-status";
 
 const CreateComment = catchAsync(async (req: Request, res: Response) => {
   const user: JwtPayload = req.user!;
